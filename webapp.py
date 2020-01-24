@@ -39,6 +39,7 @@ def renderPage2():
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     #TODO: save the favorite color in the session
+    session["fav_color"] = request.form["favoriteColor"]
     
     return render_template('page3.html')
     
